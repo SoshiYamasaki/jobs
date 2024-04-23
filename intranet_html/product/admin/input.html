@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>送信フォーム</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+
+
+    <!-- CSS -->
+    <style rel="stylesheet" id='stylesheet' type='text/css'></style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="local/Bootstrap.css" crossorigin="anonymous">
+    <!-- select2 css -->
+    <link rel="stylesheet" href="local/select2.css">
+    <!-- バリデーションのcss -->
+    <link rel="stylesheet" href="local/validation.css" type="text/css">
+    <!-- 自分のcss -->
+    <link rel="stylesheet" href="css/my_style.css" type="text/css">
+    <link rel="stylesheet" href="local/jquery.css">
+
+    <!-- JS -->
+    <!-- Bootstrap js -->
+    <scrip src="local/Bootstrap.js" crossorigin="anonymous">
+        </script>
+        <!-- jquery -->
+        <script src="local/jquery.js" type="text/javascript"></script>
+        <!-- select2 js -->
+        <script src="local/select2.js"></script>
+        <!-- バリデーションのjs -->
+        <script src="local/validation.js" type="text/javascript" charset="utf-8"></script>
+        <!-- バリデーションの言語js -->
+        <script src="local/validation_lang.js" type="text/javascript" charset="utf-8"></script>
+        <script src="local/jquery_last.js"></script>
+        <!-- 自分のjs  -->
+        <link rel="stylesheet" href="css/style.css">
+
+
+        <script src="js/conf.js" type="text/javascript"></script>
+        <script src="js/select2.js" type="text/javascript" defer></script>
+
+
+
+        <script src="js/sort.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="headerback">
+            <h1>入力フォーム</h1>
+            <p class="p_margin">Icc Web Page</p>
+        </div>
+    </header><!-- <input id="keyword"> -->
+
+
+    <div class="input">
+
+
+        <!-- classはBootstrapを適用したものが多い-->
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-10">
+                    <form id="formCheck" action="input.html" method="post">
+                        <div class="form-group">
+                            <label class="control-label">企業名</label>
+                            <input class="validate[required] form-control" value="" type="text" name="comp_name"
+                                autocomplete="off">
+                            <label class="form-checkbox">株式会社 <input type="checkbox" class="form-checkbox2" name="stock"
+                                    value="1" checked></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">ホームページのURL</label>
+                            <input class="validate[required,custom[url]] form-control" type="text" name="URL" value=""
+                                placeholder="https://google.com" autocomplete="off">
+                        </div>
+
+                        <div id='a' class="form-group">
+                            <label class="control-label">勤務地</label>
+                            <!-- selectのデータは下の方(260行目)jqueryの中 -->
+                            <select id="place_list" class="validate[required]  form-control" name='place[]' multiple>
+                                <optgroup label="県内"> </optgroup>
+                                <option value='長崎' data-sub-search='ながさきし' data-sub-two-search='nagasaki'>長崎市</option>
+                                <option value='諫早' data-sub-search='いさはやし' data-sub-two-search='isahayasi'>諫早市</option>
+                                <option value='佐世保' data-sub-search='させぼし' data-sub-two-search='sasebosi'>佐世保市</option>
+                                <option value='大村' data-sub-search='おおむらし' data-sub-two-search='oomurasi'>大村市</option>
+                                <option value='島原' data-sub-search='しまばらし' data-sub-two-search='simabarasi'>島原市</option>
+                                <option value='壱岐' data-sub-search='いき' data-sub-two-search='iki'>壱岐市</option>
+                                <option value='対馬' data-sub-search='つしま' data-sub-two-search='tusima'>対馬市</option>
+
+                                <optgroup label="県外"></option>
+                                    <option value='福岡' data-sub-search='ふくおか' data-sub-two-search='hukooka'>福岡</option>
+                                    <option value='東京' data-sub-search='とうきょう' data-sub-two-search='toukyou'>東京</option>
+                                    <option value='大阪' data-sub-search='おおさか' data-sub-two-search='oosaka'>大阪</option>
+                                    <option value='その他' data-sub-search='そのた' data-sub-two-search='sonota'>その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">職種</label>
+                            <select id="jobs_name_list" class="form-control validate[required]" name='jobs_name[]'
+                                multiple>
+                                <option value="">▼選択して下さい</option>
+                                <option value='プログラマ' data-sub-search='ぷろぐらま' data-sub-two-search='pg'>プログラマ</option>
+                                <option value='システムエンジニア' data-sub-search='しすてむえんじにあ' data-sub-two-search='se'>システムエンジニア
+                                </option>
+                                <option value='インフラエンジニア' data-sub-search='いんふらえんじにあ'
+                                    data-sub-two-search='innhuraennzinia'>インフラエンジニア</option>
+                                <option value='クラウドエンジニア' data-sub-search='くらうどえんじにあ'
+                                    data-sub-two-search='kuraudoennzinia'>クラウドエンジニア</option>
+                                <option value='セキュリティエンジニア' data-sub-search='せきゅりてぃえんじにあ'
+                                    data-sub-two-search='sekyuritexiennzinia'>セキュリティエンジニア</option>
+                                <option value='webデザイナ' data-sub-search='webでざいな' data-sub-two-search='webdezaina'>
+                                    WEBデザイナ</option>
+                                <option value='事務職' data-sub-search='じむしょく' data-sub-two-search='zimusyoku'>事務職</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">求人数</label>
+                            <input type="text" class="validate[required] form-control" name="number"
+                                value="" placeholder="○人" autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">月給</label>
+                            <select class="validate[required] form-control" name='monthly_salary'>
+                                <option value="">▼選択して下さい</option>
+                                <option value="~16万円">
+                                    ~16万円
+                                </option>
+                                <option value="~17万円">
+                                    ~17万円
+                                </option>
+                                <option value="~18万円" >
+                                    ~18万円
+                                </option>
+                                <option value="~19万円" >
+                                    ~19万円
+                                </option>
+                                <option value="~20万円" >
+                                    ~20万円
+                                </option>
+                                <option value="~21万円" >
+                                    ~21万円
+                                </option>
+                                <option value="~22万円" >
+                                    ~22万円
+                                </option>
+                                <option value="~23万円" >
+                                    ~23万円
+                                </option>
+                                <option value="~24万円" >
+                                    ~24万円
+                                </option>
+                                <option value="24万円以上">
+                                    24万円以上
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">提出書類</label>
+                            <select id="submission" class="validate[required] form-control" name='submission[]'
+                                autocomplete="off" multiple>
+                               <option value='履歴書' data-sub-search='りれきしょ' data-sub-two-search='rirekisyo'>履歴書</option>
+                               <option value='ポートフォリオ' data-sub-search='ぽーとふぉりお' data-sub-two-search='porthurio'>ポートフォリオ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">参考書類</label>
+                            <input type="text" class="form-control" placeholder="ファイルをドロップしてください" id='ddarea'
+                                name="text"
+                                value=""
+                                autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">特徴</label>
+                            <select id="feature" class="validate[required] form-control" name='feature[]' multiple>
+                                <option value='みなし残業' data-sub-search='みなしざんぎょう' data-sub-two-search='minasizanngyou'>みなし残業</option>
+                                
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">対象</label>
+                            <select class="validate[required] form-control" name='sub'>
+                                <option value="">▼選択して下さい</option>
+
+
+                                <option value="25卒">25卒</option>
+                                <option value="26卒">26卒</option>  
+                                <option value="27卒">27卒</option>  
+                                </option>
+                                
+
+                            </select>
+                        </div>
+                        <!-- validate[required]  -->
+                        <div class="form-group">
+                            <label class="control-label">コメント</label>
+                            <textarea rows="4" class="form-control" name='comment' placeholder="一言コメント"
+                                autocomplete="off"></textarea>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="label_1">通常</label>
+                            <input type="radio" id="label_1" value=1 name="flg">
+                            <label for="label_2">共通</label>
+                            <input type="radio" id="label_2" value=2 name="flg" >
+                            <label for="label_3">委託訓練用求人</label>
+                            <input type="radio" id="label_3" value=3 name="flg" >
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-info btn-size" type="submit" value="登録する" name='btn_confirm'>
+                        </div>
+                        <input type="hidden" name="csrf" value="<?php echo $token; ?>">
+                        <input type="hidden" name="id" value="<?php echo 1; ?>">
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+  
+
+    
+
+    <script defer>
+        //末尾のflagを参照して行のbackgroundcolorを変える
+        let harfText = document.getElementsByClassName("job_goo");
+        var i = 0;
+
+        if (harfText[i].lastElementChild.textContent == 0) {
+            harfText[i].style.backgroundColor = 'rgb(204, 204, 204)';
+        } else if (harfText[i].lastElementChild.textContent == 2) {
+            harfText[i].style.backgroundColor = 'rgb(255, 155, 155)';
+        } else if (harfText[i].lastElementChild.textContent == 3) {
+            harfText[i].style.backgroundColor = 'rgb(239, 206, 0)';
+        }
+        var height = 0;
+        //高さ調整用js
+
+
+        var mainco, mainpre, mainpro, maintiki, mainname, width, height, datail, margin, heighttop;
+        var submain, sub_a1, sub_a2, sub_a3, sub_a4, sub_a5;
+        var Documentsub, Feature, Comme;
+        var smtm = '';
+
+
+        //詳細をクリックする前の高さ調整
+        id = document.getElementById("1");
+        mainco = id.getElementsByClassName("company");
+        mainpre = id.getElementsByClassName("prefecture");
+        mainpro = id.getElementsByClassName("Profession");
+
+        if (mainco[0].offsetHeight >= 73 || mainpre[0].offsetHeight >= 44 || mainpro[0].offsetHeight >= 44) {
+            height = mainco[0].offsetHeight + 48; //会社名の高さ
+            maintiki = id.getElementsByClassName("job_tiki");
+            mainname = id.getElementsByClassName("job_name");
+            heighttop = String(height) + 'px';
+            maintiki[0].style.top = heighttop; //調整した勤務地の高さ
+            mainpre[0].style.top = heighttop;
+            height += mainpre[0].offsetHeight + 20;
+            heighttop = String(height) + 'px';
+            mainpro[0].style.top = heighttop; //調整した職種の高さ
+            mainname[0].style.top = heighttop;
+            height += mainname[0].offsetHeight;
+
+
+        } else {
+            height += mainco[0].offsetHeight;
+            height += mainpre[0].offsetHeight;
+            height += 40;
+        }
+
+
+        datail = id.getElementsByClassName("detail");
+
+        margin = String(height + 100) + 'px';
+        datail[0].style.marginTop = margin; //全体的に調整した高さ
+
+        //詳細の高さ調整
+
+        submain = datail[0].children[2];
+        sub_a1 = submain.children[5].offsetHeight;
+        sub_a2 = submain.children[6].offsetHeight;
+        sub_a3 = submain.children[7].offsetHeight;
+        sub_a4 = submain.children[8].offsetHeight;
+        sub_a5 = submain.children[9].offsetHeight;
+
+        Documentsub = submain.children[2];
+        Feature = submain.children[3];
+        Comme = submain.children[4];
+        //高さを求めたからあとは調整するのみ2023/01/19
+        height = (sub_a1 > sub_a2 ? sub_a1 : sub_a2) + 72; //月給か人数のテキストの高さの高いほうに合わせて＋72
+
+        heighttop = String(height) + 'px';
+        Documentsub.style.top = heighttop; //調整した提出書類の高さ
+        submain.children[7].style.top = heighttop;
+        height += (sub_a3 >= 28 ? sub_a3 : 28) + 28;
+        heighttop = String(height) + 'px';
+        Feature.style.top = heighttop; //調整した特徴の高さ
+        submain.children[8].style.top = heighttop;
+        height += (sub_a4 >= 28 ? sub_a4 : 28) + 22;
+        heighttop = String(height) + 'px';
+        Comme.style.top = heighttop; //調整した特徴の高さ
+        submain.children[9].style.top = heighttop;
+        //疑似クラスの変更を行う
+        height += (sub_a5 >= 28 ? sub_a5 : 28) + 22;
+        smtm = smtm + '#acd-check1:checked + .acd-label + .acd-content{height:' + String(height) + 'px;opacity: 1;padding: 10px;visibility: visible;}';
+
+
+        $("#stylesheet").html(smtm);
+    </script>
+
+
+
+</body>
+
+
+
+
+</html>

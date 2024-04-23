@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+
+header {
+    padding: 18px 0 24px 32px;
+    background-color: mediumblue;
+
+}
+body {
+    font-size: 120%;
+    margin: 0 auto;
+}
+h1 {
+    color: cornsilk;
+    letter-spacing: 8px;
+    font-size: 48px;
+    font-family: "Yu Gothic";
+    font-weight: 900;
+
+}
+.explanation {
+    margin-top: 35px;
+    margin-left: 48px;
+}
+.list {
+    margin: 0 15%;
+}
+
+.list_1 {
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    width: 70%;
+    background-color: #f5f5f5;
+}
+.item {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+
+:not(.not_h3) h3{
+    margin-top: 8px;
+}
+.spece {
+    margin-left: 50px;
+}
+input[type="text"] {
+     width: 70%; 
+     height: 24px;
+    }
+    .btn {
+        margin: 32px 57px;
+        text-align: center;
+        width: 50%;
+        height: 24px;
+        border-radius: 8px;
+        border: none;
+        background-color: aqua;
+    }
+    table {
+        /* font-size: 100px; */
+        padding-left: 25%;
+        margin-bottom: 50px;
+        border: none;
+
+    }

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/re.css">
+
+    <link rel="stylesheet" type="text/css" href="css/add_item.css">
+
+    <script src="js/hiragana2romaji.js"></script>
+    <title>選択ボックスの値を追加</title>
+</head>
+
+<body>
+    <header>
+        <h1>入力項目追加ページ</h1>
+    </header>
+    <div class="explanation">
+        <h3 class="not_h3">＊現在ない項目がある場合その都度登録してください。仮名をひらがなで入力することで検索予測として出るようになります。<br>
+            似たような職種は出来るだけ統一出来るようにしてください(生徒が見にくくなります)<br>
+            例:ぷ→PGなど</h3>
+    </div>
+    <div class="list">
+
+        <form action="add_item.html" method="post">
+            <div class="list_1">
+                <h2>職種の項目</h2>
+                <div class="item">
+                    <h3>漢字やカタカナ</h3>
+                    <input type="text" name="job" placeholder="例:建築士など" autocomplete="off">
+                    <h3>仮名など</h3>
+                    <input type="text" id="job_kana"name="job_kana" placeholder="例:けんちくし" autocomplete="off">
+                </div>
+            </div>
+            <div class="list_1">
+                <h2>提出物の項目</h2>
+                <div class="item">
+                    <h3>漢字やカタカナ</h3>
+
+                    <input type="text" name='submission' placeholder="例:免許書など" autocomplete="off">
+                    <h3>仮名など</h3>
+                    <input type="text" id="submission_kana" name="submission_kana" placeholder="例:めんきょしょ" autocomplete="off">
+                </div>
+            </div>
+            <div class="list_1">
+                <h2>特徴の項目</h2>
+                <div class="item">
+                    <h3>漢字やカタカナ</h3>
+                    <input type="text" name="feature" placeholder="例:第2新卒歓迎など"autocomplete="off">
+                    <h3>仮名など</h3>
+
+                    <input type="text" id="feature_kana"name="feature_kana" placeholder="例:だい2しんそつかんげい" autocomplete="off">
+                    <input type="submit" name="btn_submit" value="登録する" class="btn">
+                    <input type="hidden" id="job_romaji" name="job_romaji">
+                    <input type="hidden" id="submission_romaji" name="submission_romaji">
+                    <input type="hidden" id="feature_romaji" name="feature_romaji">
+                </div>
+
+            </div>
+            <br>
+
+        </form>
+    </div>
+    <br>
+
+    <h2 class="spece">現在登録している項目</h2>
+    <p class="spece">間違って登録した際などに削除をお願いします。</p>
+    <h3 class="spece">職種の項目</h3>
+    <table class="table" border="1">
+    <tr>
+    <th>職種</th>
+    <th>仮名</th>
+    <th>ローマ字</th>
+    </tr>
+    
+
+        <tr>
+        <td>
+        プログラマ
+        </td>
+        <td>
+        ぷろぐらま
+        </td>
+        <td>
+        pg
+        </td>
+        <form action="add_item.html" method="POST">
+        <input type="hidden" value=' . $row["id"] . ' name="id" >
+        <input type="hidden" value="job" name="kind" >
+        <td><input type="submit" value="削除する"></td>
+        </tr>
+        </form>
+
+    
+    </table>
+    
+   
+    <h3 class="spece">提出物の項目</h3>
+    
+ 
+    <table class="table" border="1">
+    <tr>
+    <th>提出物</th>
+    <th>仮名</th>
+    <th>ローマ字</th>
+    </tr>
+   
+
+        <tr>
+        <td>
+        履歴書
+        </td>
+        <td>
+        りれきしょ
+        </td>
+        
+        <td>
+        rirekisyo
+        </td>
+        <form action="add_item.html" method="POST">
+        <input type="hidden" value=' . $row["id"] . ' name="id" >
+        <input type="hidden" value="submission" name="kind" >
+        <td><input type="submit" value="削除する"></td>
+        </tr>
+        </form>
+
+    
+    </table>
+    
+    
+        <h3 class="spece">特徴の項目</h3>
+
+
+    
+    <table class="table" border="1">
+    <tr>
+    <th>特徴</th>
+    <th>仮名</th>
+    <th>ローマ字</th>
+    </tr>
+   
+
+        <tr>
+        <td>
+        第二新卒歓迎！
+        </td>
+        <td>
+        だいにしんそつかんげい
+        </td>
+        <td>
+        dainisinnsotukanngei
+        </td>
+        <form action="add_item.html" method="POST" onSubmit="return check()">
+        <input type="hidden" value=' . $row["id"] . ' name="id" >
+        <input type="hidden" value="feature" name="kind" >
+        <td><input type="submit" value="削除する"></td>
+        </tr>
+        </form>
+
+
+    
+    </table>
+
+
+
+</body>
+<script>
+function check(){
+
+	if(window.confirm('本当に削除してもいいですか？')){ // 確認ダイアログを表示
+
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+</script>
+
+</html>

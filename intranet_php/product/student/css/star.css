@@ -1,0 +1,50 @@
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+
+
+
+
+
+/* a.btn-tag--favorite {
+  color: #fff;
+  background: #f39800;
+} */
+
+i {
+  font-size: 120%;
+
+  top: 0;
+  left: 0;
+
+  width: 50px;
+  padding: 1.4rem 0;
+
+  -webkit-transition: all 0.3s;
+
+  transition: all 0.3s;
+  text-align: center;
+  letter-spacing: 0;
+  
+  content: 'Åö';
+  opacity: 0.5;
+  color: rgb(0, 0, 0);
+}
+
+
+.fa-star:before::after{
+  opacity: 1;
+  scale: 1.1;
+}
+
+/* a.btn-tag--favorite:hover {
+  background: #ffa50e;
+} */
+
+ /* i:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+
+  opacity: 1;
+} */
+.select2-container {
+  vertical-align: top;
+}

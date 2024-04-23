@@ -1,0 +1,14 @@
+.file {
+    width: 30px;
+    height: 30px;
+}
+
+.squar {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: -2;
+}
+.btn03{
+  left: 50%;
+}

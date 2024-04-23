@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>ICC Intra Net</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text.css" href=" product/student/css/reset.css">
+        <link rel="stylesheet" href="product/student/css/seitologin.css">
+    </head>
+    <body>
+        
+        <div class="theme-container grow">
+            
+            <div class="contact-con">
+                <img class="logo" src="product/student/images/logo1-4.png" width="400" height="100" alt="エラー">
+                <div class="contact">
+                    <p>ログイン</p>
+                    <form action="product/student/db/seitologin.php" class="form_log" autocomplete="off" method="post">
+                        <div class="input-group first">
+                            <input id="user" required="" type="text" name="id" class="input">
+                            <label class="user-label">ID</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="password" required class="input">
+                            <label for="password" class="user-label">PASSWORD</label>
+                        </div>
+                        <div class="btn">
+                            <button class="cta" id="btn">
+                                <span class="hover-underline-animation"> ログイン </span>
+                                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                                     viewBox="0 0 46 16">
+                                <path id="Path_10" data-name="Path 10"
+                                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                    transform="translate(30)">
+                                </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="block"><a href="product/admin/login/syokulogin.html"  ><span>管理者の方はこちら</span></a></div>
+                </div>
+            </div>
+            <canvas id="waveCanvas"></canvas>
+            <div class="footer">
+                <footer>Made by Trafix |  ©️2024</footer>
+            </div>
+        </div>
+        <script src="product/student/js/log_form.js"></script>
+    </body>
+</html>

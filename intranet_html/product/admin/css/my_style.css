@@ -1,0 +1,115 @@
+.input {
+   font: 20px sans-serif;
+}
+
+header {
+    margin: 30px 100px;
+    border-bottom: #dcdcdc solid 4px;
+}
+.headerback {
+    box-shadow: 0 0px 1px rgba(0,0,0,0.2);
+}
+h1{
+    font-size: 60px;
+    letter-spacing: 0.2em;
+}
+
+.p_margin {
+    font-size: 25px;
+    margin-left: 53px;
+    margin-bottom: 10px;
+    letter-spacing: 0.55em;
+}
+select {
+    min-width: 300px;
+}
+
+.select2-container {
+    position: static;
+}
+
+.demo {
+    top: auto;
+    margin: auto;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.form-group {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container {
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    background-color: #dcdcdc;
+    border-radius: 40px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+}
+
+.control-label {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.form-checkbox {
+    padding-top: 3px;
+}
+
+.form-checkbox2 {
+    padding-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    margin: 20px 0px;
+}
+
+/* .table {
+    font-size: 6px;
+} */
+
+.btn_width{
+    margin: 0 auto 50px auto;
+    width: 84%;
+    /* text-align: center; */
+  
+}
+.btn_{
+    padding-left: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 80%;
+    left: 10%;
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+.table_check {
+    font-size: 30px;
+    margin: 60px auto;
+    border: 5px solid #dcdcdc;
+    width: 84%;
+    line-height: 60px;
+}
+
+
+.select2-container--default .sleect2-results_option[aria-disabled=true]{
+    font-size: 130%;
+    color: black;
+    opacity: 1;
+    cursor:not-allowed;
+    font-weight: bold;
+}
+
+th {
+    text-align: center;
+    border-right: 5px solid #dcdcdc;
+}

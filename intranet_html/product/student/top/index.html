@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+
+
+    <title>iccイントラ</title>
+
+    <link rel="stylesheet" href="../css/select2.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/star.css">
+
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script src="../js/select2/select2.min.js"></script>
+    <script src="../js/sort.js"></script>
+    <script src="../js/()select2.js" defer></script>
+    <script src="../js/colorhyouji.js" defer></script>
+
+    <style rel="stylesheet" id='stylesheet' type='text/css'></style>
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="#"><img style="width: 500px; height:140px;" src="../images/logo1-4.png"></a>
+        </h1>
+        <nav>
+            <ul>
+                <li class=”current”><a href="index.html">Home</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Link.html">Link</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body_1">
+        <div class="container">
+            <img class="image" src="../images/sky.jpg">
+            <img class="image" src="../images/TKL0614_26_TP_V.jpg">
+            <img class="image" src="../images/sutu.jpg">
+        </div>
+        <div class="op">
+            <p>
+                いさはやコンピュータ・カレッジ<br>
+                就職求人サイト
+            </p>
+            <p class="ed">ICCイントラネット</p>
+        </div>
+    </div>
+    <div class="news">
+        <p class="news_1"><a href="News.php">News</a></p>
+        <ul class="news-list">
+            <li class="item">
+                <a href="#">
+                    <p class="date">2020/4/15</p>
+                    <p class="category"><span>お知らせ</span></p>
+                    <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <p class="date">2020/4/15</p>
+                    <p class="category"><span>お知らせ</span></p>
+                    <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <p class="date">2020/4/15</p>
+                    <p class="category"><span>お知らせ</span></p>
+                    <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <p class="date">2020/4/15</p>
+                    <p class="category"><span>お知らせ</span></p>
+                    <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="kyujin">
+        <p>求人検索</p>
+    </div>
+    <div class="setumei">
+        <ul>
+            <li class="student">学生用求人</li>
+            <li class="itaku">委託訓練用求人</li>
+            <li class="common">共通</li>
+            <li class="end">掲載終了</li>
+        </ul>
+    </div>
+    <div class="research_1">
+
+        <div class="kensaku_1">
+            <h2>検索フォーム</h2>
+            <select id="com" multiple>
+            </select>
+
+
+            <select id="location" style="width: 300px;" multiple="multiple">
+                <option disabled>県内</option>
+                <option value='長崎' data-sub-search='ながさきし' data-sub-two-search='nagasaki'>長崎市</option>
+                <option value='諫早' data-sub-search='いさはやし' data-sub-two-search='isahayasi'>諫早市</option>
+                <option value='佐世保' data-sub-search='させぼし' data-sub-two-search='sasebosi'>佐世保市</option>
+                <option value='大村' data-sub-search='おおむらし' data-sub-two-search='oomurasi'>大村市</option>
+                <option value='島原' data-sub-search='しまばらし' data-sub-two-search='simabarasi'>島原市</option>
+                <option value='壱岐' data-sub-search='いき' data-sub-two-search='iki'>壱岐市</option>
+                <option value='対馬' data-sub-search='つしま' data-sub-two-search='tusima'>対馬市</option>
+                <option disabled>県外 </option>
+                <option value='福岡' data-sub-search='ふくおか' data-sub-two-search='hukooka'>福岡</option>
+                <option value='東京' data-sub-search='とうきょう' data-sub-two-search='toukyou'>東京</option>
+                <option value='大阪' data-sub-search='おおさか' data-sub-two-search='oosaka'>大阪</option>
+                <option value='その他' data-sub-search='そのた' data-sub-two-search='sonota'>その他</option>
+               
+            </select>
+            <select id="syoku" style="width: 300px;" multiple="multiple">
+                <option value='プログラマ' data-sub-search='ぷろぐらま' data-sub-two-search='pg'>プログラマ</option>
+                <option value='システムエンジニア' data-sub-search='しすてむえんじにあ' data-sub-two-search='se'>システムエンジニア</option>
+                <option value='インフラエンジニア' data-sub-search='いんふらえんじにあ' data-sub-two-search='innhuraennzinia'>インフラエンジニア</option>
+                <option value='クラウドエンジニア' data-sub-search='くらうどえんじにあ' data-sub-two-search='kuraudoennzinia'>クラウドエンジニア</option>
+                <option value='セキュリティエンジニア' data-sub-search='せきゅりてぃえんじにあ' data-sub-two-search='sekyuritexiennzinia'>セキュリティエンジニア</option>
+                <option value='webデザイナ' data-sub-search='webでざいな' data-sub-two-search='webdezaina'>WEBデザイナ</option>
+                <option value='事務職' data-sub-search='じむしょく' data-sub-two-search='zimusyoku'>事務職</option>
+                
+            </select>
+            <input type="button" value="検索" onclick="kensaku()">
+            <input type="button" value="クリア" onclick="reset()">
+            <div class="tyui">
+                <p>※検索条件とソートのリセットは検索ボタンの隣にあるクリアボタンを押してください</p>
+            </div>
+            <div class="favo">
+                <input type="button" class="botan" value="お気に入りを絞り込む！" onclick="buttonClick()">
+            </div>
+        </div>
+
+        <div id="job_table">
+
+
+            <div id="titles" class="job_title">
+                <div id="number_reset" class="number_s">
+                    <p>番号</p>
+                </div>
+                <div class="company_s">
+                    <p>会社名</p>
+                </div>
+                <div class="prefecture_s">
+                    <p>勤務地</p>
+                </div>
+                <div class="Profession_s">
+                    <p>職種</p>
+                </div>
+            </div>
+            <div id="table">
+                <div id="1" class="job_goo">
+                    <div class="job_main">
+                        <div class="number">
+                            1
+                        </div>
+                        <div class="company">
+                            <a href="https://qiita.com/">
+                                株式会社アットホーム
+                            </a>
+                        </div>
+                        <div class="prefecture">
+                            長崎市
+                        </div>
+                        <div class="Profession">
+                            システムエンジニア
+                        </div>
+                        <i id="favorite1" class="fas fa-star" onclick="color(1)"></i>
+
+                        <div class="job_name">
+                            職種：
+                        </div>
+                        <div class="job_tiki">
+                            勤務地：
+                        </div>
+                        <div class="job_posting">
+                            <a href='job/help-wanted/2024_株式会社アットホーム.pdf' target="_blank">求人票PDF</a>
+
+                        </div>
+                    
+                    </div>
+                    <div class="detail">
+                        <input id="acd-check1" class="acd-check" type="checkbox">
+                        <label class="acd-label" for="acd-check1">詳細はコチラ</label>
+                        <div class="acd-content">
+                            <div class="a1">
+                                月給:
+                            </div>
+                            <div class="a2">
+                                人数:
+                            </div>
+                            <div class="a3">
+                                提出書類:
+                            </div>
+                            <div class="a4">
+                                特徴:
+                            </div>
+                            <div class="a5">
+                                コメント:
+                            </div>
+                            <div class="a1_1">
+                                16.5万
+                            </div>
+                            <div class="a2_1">
+                                100程度
+                            </div>
+                            <div class="a3_1">
+                                履歴書
+                            </div>
+                            <div class="a4_1">
+                                未経験大歓迎、学歴不問
+                            </div>
+                            <div class="a5_1">
+                                親しみの持てる職場です。最初は研修からスタートです！
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flag">
+                        1
+                    </div>
+                </div>
+
+
+
+                <div id="2" class="job_goo">
+                    <div class="job_main">
+                        <div class="number">
+                            2
+                        </div>
+                        <div class="company">
+                            <a href="https://www.apple.com/jp/store?afid=p238%7CsKSMckWTz-dc_mtid_18707vxu38484_pcrid_696272439078_pgrid_13140806301_pntwk_g_pchan__pexid__&cid=aos-jp-kwgo-brand--slid---product-">
+                                Apple
+                            </a>
+                        </div>
+                        <div class="prefecture">
+                            その他
+                        </div>
+                        <div class="Profession">
+                            プログラマ
+                        </div>
+                        <i id="favorite2" class="fas fa-star" onclick="color(2)"></i>
+
+                        <div class="job_name">
+                            職種：
+                        </div>
+                        <div class="job_tiki">
+                            勤務地：
+                        </div>
+                        <div class="job_posting">
+                            <a href='job/help-wanted/2024_apple.pdf' target="_blank">求人票PDF</a>
+
+                        </div>
+                        <div class="job_pamphlet">
+
+                            <a href=job/kigyou_panhu/2024_apple_pn.pdf target="_blank">パンフレット</a>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="detail">
+                        <input id="acd-check2" class="acd-check" type="checkbox">
+                        <label class="acd-label" for="acd-check2">詳細はコチラ</label>
+                        <div class="acd-content">
+                            <div class="a1">
+                                月給:
+                            </div>
+                            <div class="a2">
+                                人数:
+                            </div>
+                            <div class="a3">
+                                提出書類:
+                            </div>
+                            <div class="a4">
+                                特徴:
+                            </div>
+                            <div class="a5">
+                                コメント:
+                            </div>
+                            <div class="a1_1">
+                                $1,942
+                            </div>
+                            <div class="a2_1">
+                                若干名
+                            </div>
+                            <div class="a3_1">
+                                履歴書、ポートフォリオ
+                            </div>
+                            <div class="a4_1">
+                                社宅無料、ご飯食べ放題
+                            </div>
+                            <div class="a5_1">
+                                海外へ配属の可能性がございます。
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flag">
+                        1
+                    </div>
+                </div>
+
+                <div id="3" class="job_goo">
+                    <div class="job_main">
+                        <div class="number">
+                            3
+                        </div>
+                        <div class="company">
+                            <a
+                                href="https://www.google.com/search?q=s%26p500&rlz=1C1QABZ_jaJP920JP952&oq=&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQk4NjU2NmowajeoAgiwAgE&sourceid=chrome&ie=UTF-8">
+                                google
+                            </a>
+                        </div>
+                        <div class="prefecture">
+                           C
+                        </div>
+                        <div class="Profession">
+                            ワシントン
+                        </div>
+
+
+                        <i id="favorite3" class="fas fa-star" onclick="color(3)"></i>
+
+
+
+
+
+
+
+                        <div class="job_name">
+                            職種：
+                        </div>
+                        <div class="job_tiki">
+                            勤務地：
+                        </div>
+                        <div class="job_posting">
+                            <a href='job/help-wanted/' target="_blank">求人票PDF</a>
+
+                        </div>
+                        <div class="job_pamphlet">
+
+                            <a href=job/kigyou_panhu/ target="_blank">パンフレット</a>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="detail">
+                        <input id="acd-check3" class="acd-check" type="checkbox">
+                        <label class="acd-label" for="acd-check3">詳細はコチラ</label>
+                        <div class="acd-content">
+                            <div class="a1">
+                                月給:
+                            </div>
+                            <div class="a2">
+                                人数:
+                            </div>
+                            <div class="a3">
+                                提出書類:
+                            </div>
+                            <div class="a4">
+                                特徴:
+                            </div>
+                            <div class="a5">
+                                コメント:
+                            </div>
+                            <div class="a1_1">
+                                10万
+                            </div>
+                            <div class="a2_1">
+                                100
+                            </div>
+                            <div class="a3_1">
+                                履歴書
+                            </div>
+                            <div class="a4_1">
+                                アットホーム
+                            </div>
+                            <div class="a5_1">
+                                何もなし
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flag">
+                        1
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div style="width:60%;margin: 0% 20%;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=yama3483.stu%40gmail.com&ctz=Asia%2FTokyo" style=" border: 0" width="100%" height="700" frameborder="0" scrolling="no"></iframe>
+                
+    </div>
+    <a href="#" id="page-top">TOP</a>
+    <footer>
+        <small>icc 2024 intoranet_</small>
+    </footer>
+
+    <script>
+        var id_list = "";
+        for (i = 1; i != 4; i++) {
+
+
+            if (i + 1 != 4)
+                id_list += String(i) + ",";
+            else
+                id_list += String(i);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
